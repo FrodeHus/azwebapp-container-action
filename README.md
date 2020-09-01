@@ -40,5 +40,5 @@ This action deploys a ACR container to a Azure Web App for Containers instance
 
 ```bash
 az ad sp create-for-rbac -n "azwebapp-deploy" --skip-assignment
-az role assignment create --assignee <spID> --scope <resourceID of the ACR> --role "Contributor"
+az role assignment create --assignee <spID> --scope <resourceID of the Web App for Containers> --role "Contributor"
 ```
