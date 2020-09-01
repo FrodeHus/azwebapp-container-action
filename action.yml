@@ -1,0 +1,34 @@
+name: 'Deploy to Azure Web App for Containers'
+author: 'Frode Hus'
+description: 'Deploys a container image from ACR to an existing Azure Web App for Containers instance'
+branding:
+  icon: "code"
+  color: "blue"
+inputs:
+  service_principal:
+    description: "Service Principal with Contributor role on the Web App"
+    required: true
+  service_principal_password:
+    description: "Service Principal password"
+    required: true
+  tenant:
+    description: "The tenant where all the web app resources are placed"
+    required: true
+  registry:
+    description: "The name of the Azure Container Registry, minus the .azurecr.io"
+    required: true
+  image:
+    description: "Docker image name"
+    required: true
+  tag:
+    description: "Docker image tag"
+    required: true
+  webapp_name:
+    description: "Name of the Azure Web App for Containers instance"
+    required: true
+  resource_group:
+    description: "Name of the resource group with the web app resides"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
