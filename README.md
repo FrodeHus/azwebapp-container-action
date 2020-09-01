@@ -18,7 +18,7 @@ This action deploys a ACR container to a Azure Web App for Containers instance
 
 ### `tag`
 
-**Required** Docker image tag
+**Optional** Docker image tag - defaults to current commit SHA
 
 ### `registry`
 

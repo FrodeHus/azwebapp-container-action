@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+INPUT_TAG=${INPUT_TAG:-${GITHUB_SHA::8}}
+
 echo "Logging into Azure..."
 az login --service-principal -u ${INPUT_SERVICE_PRINCIPAL} -p ${INPUT_SERVICE_PRINCIPAL_PASSWORD} --tenant ${INPUT_TENANT}
 
