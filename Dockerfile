@@ -5,5 +5,5 @@ LABEL maintainer="Frode Hus"
 WORKDIR /action
 
 ADD entrypoint.sh .
-RUN ["chmod", "+x", "entrypoint.sh"]
-ENTRYPOINT [ "entrypoint.sh" ]
+RUN ["chmod", "+x", "/action/entrypoint.sh"]
+ENTRYPOINT [ "/action/entrypoint.sh" ]
